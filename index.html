@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <title>GoodTime — дорога вашего времени</title>
     <meta name="description" content="GoodTime: планирование дня на дороге времени. Голосовой ИИ-ввод задач, проекты, распорядок, статистика." />
     <meta name="theme-color" content="#0b0e14" />
@@ -17,15 +17,17 @@
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <style id="expo-reset">
-      html, body { height: 100%; background: #0b0e14; }
-      body { overflow: hidden; margin: 0; }
-      #root { display: flex; height: 100%; flex: 1; }
+      /* An app, not a page: no page zoom (a pinch on the road zoomed the whole
+         page, which then sat shifted and cut off) and nothing to scroll aside. */
+      html, body { height: 100%; width: 100%; background: #0b0e14; overflow: hidden; overscroll-behavior: none; touch-action: pan-x pan-y; }
+      body { margin: 0; position: fixed; inset: 0; }
+      #root { display: flex; height: 100%; width: 100%; flex: 1; overflow: hidden; }
     </style>
   <meta name="theme-color" content="#0b0e14">
 <link rel="icon" href="/goodtime-app/favicon.ico" /></head>
   <body>
     <noscript>Для работы GoodTime нужен JavaScript. / GoodTime needs JavaScript.</noscript>
     <div id="root"></div>
-  <script src="/goodtime-app/_expo/static/js/web/index-3af20bcc9039d38f01f14a8e15761be8.js" defer></script>
+  <script src="/goodtime-app/_expo/static/js/web/index-c3f35a480efbd97d780db4e3d17d01c8.js" defer></script>
 </body>
 </html>
